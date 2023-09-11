@@ -11,6 +11,11 @@ public class ZPhysicsEntity : MonoBehaviour
     public float maxSpeed = 999999f;
     private Transform _transform;
 
+    public virtual void FixedUpdate()
+    {
+        ApplyTransformation(Time.fixedDeltaTime);
+    }
+
     public void ApplyTransformation(float dt)
     {
         if (_transform == null)
@@ -43,6 +48,7 @@ public class ZPhysicsEntity : MonoBehaviour
     public void SetVelocity(float speed, Angle angle)
     {
         this.velocity = angle.heading * speed;
+        this.angle = angle;
     }
     
     public void SetVelocity(float speed)
