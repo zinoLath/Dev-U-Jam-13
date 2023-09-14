@@ -18,6 +18,6 @@ public class PlayerController : ZPhysicsEntity
 
     public void GetHit()
     {
-        
+        Debug.Log("o jogador for atingido");
     }
 }
