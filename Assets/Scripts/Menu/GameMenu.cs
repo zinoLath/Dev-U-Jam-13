@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class GameMenu : MonoBehaviour
 {
@@ -44,6 +45,7 @@ public class GameMenu : MonoBehaviour
             _menu.SetActive(false);
             opened = false;
         }
+        Time.timeScale = 1;
     }
 
     public void OpenMenu(InputAction.CallbackContext ctx)
@@ -53,6 +55,8 @@ public class GameMenu : MonoBehaviour
             _menu.SetActive(true);
             opened = true;
         }
+        Time.timeScale = 0;
+        
     }
 
     public void CloseMenu(InputAction.CallbackContext ctx)
@@ -62,6 +66,7 @@ public class GameMenu : MonoBehaviour
             _menu.SetActive(false);
             opened = false;
         }
+        Time.timeScale = 1;
     }
 
     public void ControlSound(float value)
