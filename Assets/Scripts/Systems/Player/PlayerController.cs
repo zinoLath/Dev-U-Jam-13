@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerController : ZPhysicsEntity
 {
+    public float speed;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,7 +14,8 @@ public class PlayerController : ZPhysicsEntity
     // Update is called once per frame
     void Update()
     {
-        
+        Vector2 inputMove = new Vector2(Input.GetAxisRaw("Horizontal"),Input.GetAxisRaw("Vertical")).normalized;
+        position += inputMove * speed * Time.deltaTime;
     }
 
     public void GetHit()
