@@ -14,7 +14,7 @@ public class StageManager : MonoBehaviour
 
             yield return obj.ExecuteFormation();
             
-            yield return new WaitForSeconds(3f);
+            yield return null;
         }
     }
 }
