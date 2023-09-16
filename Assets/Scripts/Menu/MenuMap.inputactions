@@ -1,0 +1,54 @@
+{
+    "name": "MenuMap",
+    "maps": [
+        {
+            "name": "Menu",
+            "id": "87ee2e3d-2b93-438f-b96d-7e6ce44b3b59",
+            "actions": [
+                {
+                    "name": "Open",
+                    "type": "Button",
+                    "id": "7a3060b0-56c7-4d8e-af2f-00c33c8834cd",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Close",
+                    "type": "Button",
+                    "id": "d855c297-a042-4241-aa19-f2a5c125b81d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "282faa83-f1b1-4385-8686-56ce771427bc",
+                    "path": "<Keyboard>/p",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Open",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0a5ef754-5647-47a7-82d2-9b32d09e8d53",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Close",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

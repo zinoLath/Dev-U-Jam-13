@@ -31,4 +31,5 @@ public class MenuSettings : MonoBehaviour
         Debug.Log("Quitei");
         //Application.Quit();
     }
+
 }
