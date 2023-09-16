@@ -104,3 +104,4 @@ MonoBehaviour:
   rotateTransform: 1
   maxSpeed: 999999
   _id: 0
+  hitboxSizeSq: 0.5

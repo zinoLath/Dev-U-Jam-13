@@ -33,11 +33,14 @@ public class BulletManager : MonoBehaviour
         
         for (int i = 0; i < instanceCount; i++)
         {
-            float x = (playerpos.x - bulletArray[i].position.x), y = (playerpos.y - bulletArray[i].position.y);
-            if(x*x + y*y <= bulletArray[i].hitboxSizeSq)
+            if (bulletArray[i].isActiveAndEnabled)
             {
-                GameManager.Instance.player.GetHit();
-                break;
+                float x = (playerpos.x - bulletArray[i].position.x), y = (playerpos.y - bulletArray[i].position.y);
+                if(x*x + y*y <= bulletArray[i].hitboxSizeSq)
+                {
+                    GameManager.Instance.player.GetHit();
+                    break;
+                }
             }
         }
     }
