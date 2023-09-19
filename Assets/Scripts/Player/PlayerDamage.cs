@@ -24,7 +24,6 @@ public class PlayerDamage : MonoBehaviour
             _life = 5f;
         }
 
-        Debug.Log(_maxTime);
 
         /*if(_maxTime <= 0)
         {
