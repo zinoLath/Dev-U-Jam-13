@@ -9,10 +9,6 @@ public class GameManager : MonoBehaviour
     public Rect playingField;
     public Rect deleteBound;
 
-    public int playerLives;
-    public int playerBombs;
-    public float hyperCharge;
-
     public ulong score;
 
     public PlayerController player;
@@ -27,5 +23,11 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    void OnDrawGizmos()
+    {
+        Gizmos.color = new Color(1,0,0,1);
+        Gizmos.DrawWireCube(playingField.center, new Vector3(playingField.width, playingField.height, 1));
     }
 }
