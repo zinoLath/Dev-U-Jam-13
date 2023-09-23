@@ -16,7 +16,7 @@ TagManager:
   - Bullet
   - Enemy
   - StageUI
-  - 
+  - HUD
   - 
   - 
   - 
@@ -46,4 +46,7 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 2062671037
+    locked: 0
+  - name: UI
+    uniqueID: 377333005
     locked: 0

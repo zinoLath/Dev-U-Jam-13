@@ -157,8 +157,30 @@
                 },
                 {
                     "name": "",
+                    "id": "7d281c9d-9739-4dba-9e49-f085e2f0229d",
+                    "path": "<Keyboard>/#(Z)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Shoot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "522637dd-ab62-4d2d-958c-dc20d8be43e9",
                     "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Laser",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6cf74c29-94c1-4d6a-b2e6-6c6c07ebbb39",
+                    "path": "<Keyboard>/#(X)",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

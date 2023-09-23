@@ -12,7 +12,8 @@ public class StageManager : MonoBehaviour
             EnemyFormation currFormation = enemyFormations[Random.Range((int)0,(int)enemyFormations.Count-1)];
             EnemyFormation obj = Instantiate(currFormation);
 
-            yield return obj.ExecuteFormation();
+            yield return StartCoroutine(obj.ExecuteFormation());
+            break;
             
             yield return null;
         }

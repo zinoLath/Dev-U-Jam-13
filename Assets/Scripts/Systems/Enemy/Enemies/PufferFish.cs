@@ -8,10 +8,17 @@ public class PufferFish : MonoBehaviour
     public int times;
     IEnumerator Start()
     {
-        for (int i = 0; i < times; i++)
+        while (true)
         {
-            BulletManager.Instance.SpawnBullet((Vector2)transform.position, 2, new Angle((float)i/times));
+            
+            for (int i = 0; i < times; i++)
+            {
+                BulletManager.Instance.SpawnBullet(
+                    (Vector2)transform.position,
+                    2, 
+                    new Angle((float)i/times));
+            }
+            yield return new WaitForSeconds(timer);
         }
-        yield return new WaitForSeconds(timer);
     }
 }
