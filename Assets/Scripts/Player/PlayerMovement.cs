@@ -8,17 +8,27 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     private PlayerControl _playerControl;
-    private Rigidbody2D _rb;
+    private PlayerController _pc;
     [SerializeField] private float speed = 10f;
+
+    private Vector2 velocity;
 
     void Start()
     {
-        _rb = GetComponent<Rigidbody2D>();
+        _pc = GetComponent<PlayerController>();
     }
 
     void Awake()
     {
         _playerControl = new PlayerControl();
+    }
+
+    void FixedUpdate()
+    {
+        _pc.position += velocity * Time.fixedDeltaTime;
+        GameManager gm = GameManager.Instance;
+        _pc.position = new Vector2(Mathf.Clamp(_pc.position.x,gm.playingField.xMin,gm.playingField.xMax),
+                                   Mathf.Clamp(_pc.position.y,gm.playingField.yMin,gm.playingField.yMax));
     }
     
     void OnEnable()
@@ -37,6 +47,6 @@ public class PlayerMovement : MonoBehaviour
     
     void Move(InputAction.CallbackContext ctx)
     {
-        _rb.velocity = new Vector3(ctx.ReadValue<Vector2>().x, ctx.ReadValue<Vector2>().y) * speed;
+        velocity = new Vector2(ctx.ReadValue<Vector2>().x, ctx.ReadValue<Vector2>().y) * speed;
     }
 }
