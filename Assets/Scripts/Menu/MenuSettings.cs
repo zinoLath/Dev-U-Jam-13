@@ -5,13 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class MenuSettings : MonoBehaviour
 {
-    [SerializeField] private string _levelName;
     [SerializeField] private GameObject _mainMenu;
     [SerializeField] private GameObject _optionsMenu;
     public void StarButton()
     {
-        Debug.Log("Iniciou");
-        //SceneManager.LoadScene(_levelName);
+        SceneManager.LoadScene("GameScene");
     }
 
     public void OptionsButton()
@@ -28,8 +26,7 @@ public class MenuSettings : MonoBehaviour
 
     public void QuitButton()
     {
-        Debug.Log("Quitei");
-        //Application.Quit();
+        Application.Quit();
     }
 
 }

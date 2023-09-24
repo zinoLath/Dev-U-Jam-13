@@ -38,6 +38,7 @@ public class AmmoControl : MonoBehaviour
     {
         if(_ammo > 0)
         {
+            AudioManager.PlaySound("Shot");
             Instantiate(_bullet, _shootingPosition.position, _shootingPosition.rotation);
             _ammo--;
         }
