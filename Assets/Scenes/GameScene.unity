@@ -1486,7 +1486,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 377333005
   m_SortingOrder: 0
@@ -2245,7 +2245,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5bd7032ad9f2784aa609d8c9003e003, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _score: 0
+  _maxTime: 60
   _healthBar: {fileID: 438588264}
+  _firePoint: {fileID: 2064323042}
+  _scoreDisplay: {fileID: 0}
+  _kill: {fileID: 0}
+  _death: {fileID: 0}
 --- !u!58 &1531915347
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -59,10 +59,7 @@ GameObject:
   - component: {fileID: 5886407749875183129}
   - component: {fileID: 2500948723360745874}
   - component: {fileID: 6180008409257650720}
-  - component: {fileID: 6769745853159748612}
-  - component: {fileID: 5902152691801275895}
-  - component: {fileID: 7748707853115752703}
-  - component: {fileID: 2617348255558162524}
+  - component: {fileID: 3430353155471156195}
   m_Layer: 9
   m_Name: Circle (1)
   m_TagString: Untagged
@@ -152,7 +149,6 @@ MonoBehaviour:
   timer1: 0.6
   timer2: 0.1
   times: 8
-  sprite: {fileID: 21300000, guid: 5452ae1f04249214792729c1dd9015d0, type: 3}
 --- !u!114 &6180008409257650720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,7 +162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wait: 5
---- !u!95 &6769745853159748612
+--- !u!95 &3430353155471156195
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -186,69 +182,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
---- !u!111 &5902152691801275895
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2890736516470184231}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: b246d3bf1e4b6c240997e28b80ab8fd9, type: 2}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
---- !u!114 &7748707853115752703
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2890736516470184231}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5bd7032ad9f2784aa609d8c9003e003, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _healthBar: {fileID: 0}
---- !u!70 &2617348255558162524
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2890736516470184231}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.019538522, y: 0.12211573}
-  m_Size: {x: 0.79153657, y: 0.79153657}
-  m_Direction: 0
 --- !u!1 &4411551424505518665
 GameObject:
   m_ObjectHideFlags: 0
@@ -267,7 +200,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7307758460507132605
 Transform:
   m_ObjectHideFlags: 0
@@ -349,7 +282,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: 1
   times: 10
-  sprite: {fileID: 0}
 --- !u!114 &1021383435994466347
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -375,16 +307,15 @@ GameObject:
   - component: {fileID: 3062497032171473751}
   - component: {fileID: 5462442796274731844}
   - component: {fileID: 474457514832683374}
-  - component: {fileID: 8793179995210833728}
-  - component: {fileID: 7594879210371305772}
-  - component: {fileID: 1119015750975953725}
+  - component: {fileID: 8863694050810150035}
+  - component: {fileID: 8925932448719695504}
   m_Layer: 9
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6927497566444917929
 Transform:
   m_ObjectHideFlags: 0
@@ -441,7 +372,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c62d35129c9d4bb4794ba736fadce08b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b9f14233cecffce4f8c14d5a9f122a08, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -466,7 +397,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: 0.5
   times: 5
-  sprite: {fileID: 21300000, guid: 279aec43804794b4d90a7d0fd4937120, type: 3}
 --- !u!114 &474457514832683374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -480,7 +410,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wait: 0.2
---- !u!95 &8793179995210833728
+--- !u!95 &8863694050810150035
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -490,7 +420,7 @@ Animator:
   m_GameObject: {fileID: 4626464212518792312}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 6c00bf4917413ab489fbb6557a15dddc, type: 2}
+  m_Controller: {fileID: 9100000, guid: cdeb2d8a7b57ad54897b3116ffafc917, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -500,51 +430,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
---- !u!114 &7594879210371305772
-MonoBehaviour:
+--- !u!111 &8925932448719695504
+Animation:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4626464212518792312}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5bd7032ad9f2784aa609d8c9003e003, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _healthBar: {fileID: 0}
---- !u!70 &1119015750975953725
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4626464212518792312}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.061057925, y: -0.019538641}
-  m_Size: {x: 0.5228846, y: 0.74758196}
-  m_Direction: 0
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
