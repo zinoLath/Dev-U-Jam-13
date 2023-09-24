@@ -1,10 +1,10 @@
 using System;
 using UnityEngine;
 
-public class EnemyBase : ZPhysicsEntity
+public class EnemyBase : MonoBehaviour
 {
-    private float health;
-    private float maxhealth;
+    public float health = 2f;
+    public float maxhealth = 2f;
     public Rect deleteRect;
 
     void Update()
@@ -14,15 +14,12 @@ public class EnemyBase : ZPhysicsEntity
             Kill();
         }
 
-        if (!IsInRect(deleteRect))
-        {
-            Destroy(this);
-        }
     }
 
     public void Kill()
     {
-        Destroy(this);
+        gameObject.SetActive(false);
+        
     }
 
     public void Damage(float damage)
@@ -44,5 +41,6 @@ public class EnemyBase : ZPhysicsEntity
     private void OnTriggerEnter2D(Collider2D other)
     {
         Damage(other.gameObject.GetComponent<PlayerBullet>().damage);
+        Destroy(other.gameObject);
     }
 }

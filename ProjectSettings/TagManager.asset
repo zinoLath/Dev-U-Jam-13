@@ -13,7 +13,7 @@ TagManager:
   - PixelRenderer
   - Water
   - UI
-  - 
+  - PlayerShot
   - StageUI
   - Enemy
   - Bullet

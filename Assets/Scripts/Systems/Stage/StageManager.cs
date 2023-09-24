@@ -9,13 +9,12 @@ public class StageManager : MonoBehaviour
     {
         while (true)
         {
-            EnemyFormation currFormation = enemyFormations[Random.Range((int)0,(int)enemyFormations.Count-1)];
+            EnemyFormation currFormation = enemyFormations[Random.Range((int)0,(int)enemyFormations.Count)];
             EnemyFormation obj = Instantiate(currFormation);
 
             yield return StartCoroutine(obj.ExecuteFormation());
-            break;
             
-            yield return null;
+            yield return new WaitForSeconds(3f);
         }
     }
 }

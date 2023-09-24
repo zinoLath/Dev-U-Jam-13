@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class AmmoControl : MonoBehaviour
 {
     private PlayerControl _playerControl;
+    public float ammoTimer = 10f;
     [SerializeField] private float _ammo = 10f;
     [SerializeField] private Image _ammoFiller;
     [SerializeField] private Transform _shootingPosition;
@@ -32,15 +33,21 @@ public class AmmoControl : MonoBehaviour
     void Update()
     {
         _ammoFiller.fillAmount = _ammo/10;
+        ammoTimer -= Time.deltaTime;
+        if (ammoTimer <= 0f)
+        {
+            _ammo = 10;
+        }
     }
     
     void Shoot(InputAction.CallbackContext ctx)
     {
         if(_ammo > 0)
         {
-            AudioManager.PlaySound("Shot");
+            //AudioManager.PlaySound("Shot");
             Instantiate(_bullet, _shootingPosition.position, _shootingPosition.rotation);
             _ammo--;
+            ammoTimer = 3f;
         }
     }
 }

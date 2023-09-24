@@ -31,15 +31,21 @@ public class PlayerDamage : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
+        
         if(other.gameObject.tag == "Enemy")
         {
-            _life--;
+            OnHit();
         }
+    }
+
+    public void OnHit()
+    {
+        _life--;
     }
 
     void Update()
     {
-        Debug.Log(_maxTime);
+        //Debug.Log(_maxTime);
 
         _healthBar.fillAmount = _life/8;
         _maxTime -= Time.deltaTime;
@@ -78,7 +84,7 @@ public class PlayerDamage : MonoBehaviour
         }
         
 
-        _scoreDisplay.text = _score.ToString();
+        //_scoreDisplay.text = _score.ToString();
 
         if(_maxTime <= 0)
         {

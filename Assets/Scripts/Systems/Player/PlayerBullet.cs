@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerBullet : ZPhysicsEntity
+public class PlayerBullet : MonoBehaviour
 {
-    public float damage;
+    public float damage = 1f;
 }
