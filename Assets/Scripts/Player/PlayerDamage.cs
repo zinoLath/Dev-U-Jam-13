@@ -10,6 +10,12 @@ public class PlayerDamage : MonoBehaviour
     private float _life = 5f;
     void OnTriggerEnter2D(Collider2D other)
     {
+        OnHit();
+    }
+
+    public void OnHit()
+    {
+        
         _life--;
     }
 

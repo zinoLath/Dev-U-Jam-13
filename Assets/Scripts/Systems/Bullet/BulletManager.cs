@@ -30,6 +30,10 @@ public class BulletManager : MonoBehaviour
     void FixedUpdate()
     {
         Vector2 playerpos = GameManager.Instance.player.position;
+        if (GameManager.Instance.player.protectTimer >= 0f)
+        {
+            return;
+        }
         
         for (int i = 0; i < instanceCount; i++)
         {
@@ -45,7 +49,7 @@ public class BulletManager : MonoBehaviour
         }
     }
 
-    public Bullet SpawnBullet(Vector2 position, float speed, Angle angle)
+    public Bullet SpawnBullet(Sprite image, Vector2 position, float speed, Angle angle)
     {
         Bullet obj = bulletArray[arrayCursor];
 
@@ -53,6 +57,7 @@ public class BulletManager : MonoBehaviour
         obj.SetPosition(position);
         obj.SetVelocity(speed, angle);
         obj.SetAcceleration(0);
+        obj.spriteRenderer.sprite = image;
 
         arrayCursor++;
         arrayCursor = arrayCursor % instanceCount;

@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerController : ZPhysicsEntity
 {
     public float speed;
+
+    public float protectTimer;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,10 +18,12 @@ public class PlayerController : ZPhysicsEntity
     {
         Vector2 inputMove = new Vector2(Input.GetAxisRaw("Horizontal"),Input.GetAxisRaw("Vertical")).normalized;
         position += inputMove * speed * Time.deltaTime;
+        protectTimer -= Time.deltaTime;
     }
 
     public void GetHit()
     {
-        Debug.Log("o jogador for atingido");
+        GetComponent<PlayerDamage>().OnHit();
+        protectTimer = 2f;
     }
 }

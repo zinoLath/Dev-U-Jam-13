@@ -6,6 +6,7 @@ public class PufferFish : MonoBehaviour
 {
     public float timer;
     public int times;
+    public Sprite sprite;
     IEnumerator Start()
     {
         while (true)
@@ -13,7 +14,7 @@ public class PufferFish : MonoBehaviour
             
             for (int i = 0; i < times; i++)
             {
-                BulletManager.Instance.SpawnBullet(
+                BulletManager.Instance.SpawnBullet(sprite, 
                     (Vector2)transform.position,
                     2, 
                     new Angle((float)i/times));

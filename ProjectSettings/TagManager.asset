@@ -11,12 +11,12 @@ TagManager:
   - PixelRenderer
   - Water
   - UI
-  - Background
-  - Player
-  - Bullet
-  - Enemy
+  - 
   - StageUI
-  - HUD
+  - Enemy
+  - Bullet
+  - Player
+  - Background
   - 
   - 
   - 
